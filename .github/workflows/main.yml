@@ -20,7 +20,7 @@ jobs:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
           IMAGE_NAME: my-image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/manishapinjari:${IMAGE_NAME} .
+          docker build .
           docker push $DOCKERHUB_USERNAME/$IMAGE_NAME:latest
 
   test:
